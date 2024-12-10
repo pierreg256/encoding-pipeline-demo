@@ -1,0 +1,11 @@
+{
+  "name": "epd-daemon",
+  "version": "1.0.0",
+  "description": "daemon for the selction and encoding files from a storage account through a service bus topic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pierreg256",
+  "license": "MIT"
+}
