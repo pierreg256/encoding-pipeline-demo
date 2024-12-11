@@ -26,13 +26,14 @@ env:
 
 jobs:
   terraform-plan:
+    environment: dev
     name: "Terraform Plan"
     runs-on: ubuntu-latest
     env:
       #this is needed since we are running terraform with read-only permissions
-      ARM_CLIENT_ID: "${{ secrets.AZURE_CLIENT_ID }}"
-      ARM_SUBSCRIPTION_ID: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
-      ARM_TENANT_ID: "${{ secrets.AZURE_TENANT_ID }}"
+      ARM_CLIENT_ID: "${{secrets.AZURE_CLIENT_ID}}"
+      ARM_SUBSCRIPTION_ID: "${{secrets.AZURE_SUBSCRIPTION_ID}}"
+      ARM_TENANT_ID: "${{secrets.AZURE_TENANT_ID}}"
       ARM_USE_AZUREAD: true
     outputs:
       tfplanExitCode: ${{ steps.tf-plan.outputs.exitcode }}
