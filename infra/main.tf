@@ -4,6 +4,9 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "4.13.0"
     }
+    azapi = {
+      source = "Azure/azapi"
+    }
   }
   backend "azurerm" {
   }
@@ -11,6 +14,10 @@ terraform {
 
 provider "azurerm" {
   features {}
+}
+
+provider "azapi" {
+  # Configuration options for azapi provider
 }
 
 resource "random_id" "main" {
